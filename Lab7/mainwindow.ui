@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>380</width>
+         <height>197</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="3" column="0">
+         <widget class="QGraphicsView" name="graphicsView"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QSlider" name="Kontrast">
+          <property name="minimum">
+           <number>50</number>
+          </property>
+          <property name="maximum">
+           <number>299</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QSlider" name="Jasnosc">
+          <property name="minimum">
+           <number>-100</number>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>400</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuPlik">
+    <property name="title">
+     <string>Plik</string>
+    </property>
+    <addaction name="actionOtworz"/>
+    <addaction name="actionZapisz"/>
+    <addaction name="actionZakoncz"/>
+    <addaction name="actionPokaz"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuOpenCV">
+    <property name="title">
+     <string>OpenCV</string>
+    </property>
+    <addaction name="actionPodzial_na_RGB"/>
+    <addaction name="actionPodzial_na_YCrCb"/>
+    <addaction name="actionPodzial_na_HSV"/>
+    <addaction name="actionKontrast_i_Jasnosc_obrazu_RGB"/>
+   </widget>
+   <addaction name="menuPlik"/>
+   <addaction name="menuOpenCV"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOtworz"/>
+   <addaction name="actionZapisz"/>
+   <addaction name="actionZakoncz"/>
+   <addaction name="actionPokaz"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOtworz">
+   <property name="icon">
+    <iconset resource="zasoby.qrc">
+     <normaloff>:/ikony/open2.png</normaloff>:/ikony/open2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Otworz</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionZapisz">
+   <property name="icon">
+    <iconset resource="zasoby.qrc">
+     <normaloff>:/ikony/save.png</normaloff>:/ikony/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zapisz</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionZakoncz">
+   <property name="icon">
+    <iconset resource="zasoby.qrc">
+     <normaloff>:/ikony/quit.png</normaloff>:/ikony/quit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zakoncz</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+K</string>
+   </property>
+  </action>
+  <action name="actionPokaz">
+   <property name="icon">
+    <iconset resource="zasoby.qrc">
+     <normaloff>:/ikony/show.png</normaloff>:/ikony/show.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pokaz</string>
+   </property>
+  </action>
+  <action name="actionPodzial_na_RGB">
+   <property name="text">
+    <string>Podzial na RGB</string>
+   </property>
+  </action>
+  <action name="actionPodzial_na_YCrCb">
+   <property name="text">
+    <string>Podzial na YCrCb</string>
+   </property>
+  </action>
+  <action name="actionPodzial_na_HSV">
+   <property name="text">
+    <string>Podzial na HSV</string>
+   </property>
+  </action>
+  <action name="actionJasnosc_obrazu_RGB">
+   <property name="text">
+    <string>Jasnosc obrazu RGB</string>
+   </property>
+  </action>
+  <action name="actionKontrast_obrazu_RGB">
+   <property name="text">
+    <string>Kontrast obrazu RGB</string>
+   </property>
+  </action>
+  <action name="actionKontrast_i_Jasnosc_obrazu_RGB">
+   <property name="text">
+    <string>Kontrast i Jasnosc obrazu RGB</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="zasoby.qrc"/>
+ </resources>
+ <connections/>
+</ui>
